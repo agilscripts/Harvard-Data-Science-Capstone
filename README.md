@@ -2,31 +2,38 @@
 
 ## Overview
 
-This project is part of the HarvardX Data Science series, focused on building a movie recommendation system using the MovieLens dataset. The goal of the project is to predict user ratings for movies using machine learning models and to evaluate the performance of these predictions using Root Mean Square Error (RMSE).
+This project was created as part of the **HarvardX Data Science Capstone**. The goal of the capstone is to build a **movie recommendation system** using the **MovieLens dataset**. The project aims to predict user ratings for movies and evaluate the model’s performance using **Root Mean Square Error (RMSE)**, which is a standard evaluation metric for recommendation systems.
 
-The project includes two implementations: one in Python using Jupyter Notebooks, and the other in R. The R version will be added soon.
+The project is implemented in two environments:
+- **Python** using Jupyter Notebooks.
+- **R**, with the code written in both R scripts and R Markdown for documentation and reproducibility.
+
+Both implementations were created to demonstrate the ability to use multiple programming tools to tackle the same problem.
 
 ## Project Structure
 
 The repository is organized as follows:
 
 ```
-├── Movie Files/                # Contains the MovieLens dataset CSV files (ratings, movies, links, tags)
-├── notebooks/                  # Jupyter notebooks for Python implementation
-│   ├── movielens_project.ipynb # Python notebook with the movie recommendation system implementation
-├── R/                          # Directory for R scripts (R implementation coming soon)
-│   ├── movielens_project.R     # R script for recommendation system (to be added)
-├── README.md                   # This file
+├── Capstone.ipynb               # Python Jupyter Notebook with the movie recommendation system implementation
+├── MovieReviews.R               # R script for recommendation system
+├── MovieReviews.Rmd             # R Markdown report for the R implementation
+├── MovieReviews.pdf             # Knitted PDF report of the R implementation
+├── README.md                    # This file
+├── links.csv                    # MovieLens links dataset
+├── movies.csv                   # MovieLens movies dataset
+├── ratings.csv                  # MovieLens ratings dataset
+├── tags.csv                     # MovieLens tags dataset
 ```
 
 ## Datasets
 
-The MovieLens dataset used in this project is a subset of a much larger dataset. It includes the following CSV files:
+The **MovieLens dataset** used in this project is a well-known dataset for movie recommendation systems. The subset used in this project includes:
 
-- `ratings.csv`: Contains user ratings for movies
-- `movies.csv`: Contains movie titles and genres
-- `tags.csv`: Contains user tags associated with movies
-- `links.csv`: Contains identifiers that can be used to link to other sources of movie data
+- `ratings.csv`: User ratings for movies
+- `movies.csv`: Movie titles and genres
+- `tags.csv`: User-generated tags associated with movies
+- `links.csv`: Identifiers for linking to external movie data sources (IMDB, TMDb)
 
 ## Requirements
 
@@ -34,10 +41,10 @@ The MovieLens dataset used in this project is a subset of a much larger dataset.
 
 To run the Python implementation, you will need the following libraries:
 
-- pandas
-- numpy
-- scikit-learn
-- Jupyter Notebook (for running the `.ipynb` file)
+- `pandas`
+- `numpy`
+- `scikit-learn`
+- Jupyter Notebook
 
 You can install the necessary packages using `pip`:
 
@@ -47,7 +54,7 @@ pip install pandas numpy scikit-learn jupyter
 
 ### R Environment
 
-The R implementation uses the following libraries:
+To run the R implementation, the following R packages are required:
 
 - `tidyverse`
 - `caret`
@@ -63,31 +70,31 @@ install.packages("caret")
 
 ### Python (Jupyter Notebook)
 
-1. Download or clone the repository:
+1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/movielens-project.git
    ```
 
-2. Navigate to the `notebooks/` directory and open the Jupyter notebook:
+2. Navigate to the project directory and open the Jupyter notebook:
    ```bash
-   cd movielens-project/notebooks
-   jupyter notebook movielens_project.ipynb
+   cd movielens-project
+   jupyter notebook Capstone.ipynb
    ```
 
-3. Run the cells in the notebook to see the code implementation and output.
+3. Run the cells in the notebook to execute the code and view the results.
 
 ### R
 
-The R version of the project is under development and will be added to this repository soon.
+1. Open **MovieReviews.Rmd** in RStudio for a report version, or **MovieReviews.R** for the script version.
+2. Run the script or knit the `.Rmd` file to view the output.
 
 ## Model Development
 
-The project involves splitting the dataset into training (`edx`) and validation (`final_holdout_test`) sets, training a machine learning algorithm to predict movie ratings, and calculating RMSE to evaluate the model.
+The project involves:
+- Splitting the dataset into **training** (`edx`) and **validation** (`final_holdout_test`) sets.
+- Training a baseline model to predict movie ratings.
+- Using **RMSE** to evaluate model performance.
 
-The current implementation uses the average movie rating as a baseline model. More advanced machine learning models will be added in future updates.
-
-## Project Goals
-
-- Develop a movie recommendation system using the MovieLens dataset.
-- Implement the project in both Python and R.
-- Use RMSE to evaluate the performance of the recommendation system.
+### Baseline Model:
+- The current implementation uses the **average movie rating** as a baseline model.
+- The baseline model produced an **RMSE of 0.9617**, indicating how closely the model's predictions align with actual user ratings.
