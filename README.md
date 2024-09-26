@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project was developed as part of the **HarvardX Data Science Capstone** and focuses on building a **movie recommendation system** using the **MovieLens dataset**. The goal is to predict user ratings for movies based on their past ratings and to evaluate model performance using **Root Mean Square Error (RMSE)**.
+This project was developed as part of the **HarvardX Data Science Capstone** and focuses on building a **movie recommendation system** using the **MovieLens dataset**. The goal is to apply **machine learning** techniques to predict user ratings for movies based on their past ratings and to evaluate model performance using **Root Mean Square Error (RMSE)**.
 
 The project is implemented in two programming environments:
 - **Python** using Jupyter Notebooks, where multiple models are built and visualized.
